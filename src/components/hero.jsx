@@ -73,10 +73,11 @@ const Hero = () => {
     });
 
     return (
-        <section id="hero" ref={containerRef} className=" relative h-screen justify-center overflow-hidden">
+        <section id="hero" ref={containerRef} className="relative h-screen justify-center overflow-hidden border-0">
 
-            <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px] -z-5"></div>
-            
+            <div className="absolute h-100% inset-0 bg-black/30 backdrop-blur-[2px] -z-5"></div>
+
+
             <h1 className='title'>MOJITO</h1>
 
             <img src="/images/hero-left-leaf.png" alt="left-leaf" className='left-leaf' />
@@ -89,8 +90,9 @@ const Hero = () => {
                         <p className='subtitle'> Saborear o espírito <br />do Verão</p>
                     </div>
 
-                    <div className='view-cocktails'>
-                        <p className='subtitle'>
+                    <div className='view-cocktails overflow-hidden'>
+
+                        <p className='subtitle transform-translate-y-1em'>
                             Cada coquetel do nosso menu é uma mistura de ingredientes premium,
                             toque criativo e receitas atemporais — elaborados para encantar seus sentidos.
                         </p>
@@ -99,17 +101,25 @@ const Hero = () => {
 
                 </div>
             </div>
-            <div className='video absolute inset-0'>
-                <video
-                    src="/videos/output.mp4"
-                    ref={videoRef}
-                    muted
-                    playsInline
-                    preload='auto'
-                    className="absolute top-20 left-0 h-full object-center -z-100 "
-                />
 
-            </div>
+
+
+
+     
+                <div className='video absolute  inset-0 h-[95%] -z-30'>
+                    <video
+                        src="/videos/output.mp4"
+                        ref={videoRef}
+                        muted
+                        playsInline
+                        preload='auto'
+                        className="absolute top-20 left-0 h-full object-center -z-30"
+                    />
+
+                </div>
+
+
+
         </section>
 
 
