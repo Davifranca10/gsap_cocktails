@@ -1,11 +1,20 @@
 import { useGSAP } from '@gsap/react';
-import React from 'react';
+import React, { useRef } from 'react';
 import { ScrollTrigger, SplitText } from 'gsap/all';
 import { gsap } from 'gsap';
+import { useMediaQuery } from 'react-responsive';
 
 
+
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Hero = () => {
+
+    const videoRef = useRef();
+    const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
+    const containerRef = useRef(null);
 
     useGSAP(() => {
 
@@ -13,12 +22,12 @@ const Hero = () => {
         const paragraphSplit = new SplitText('.subtitle', { type: 'lines' });
 
         heroSplit.chars.forEach((char) => char.classList.add('text-gradient'));
-        
+
         gsap.from(heroSplit.chars, {
-           yPercent: 100,
-           duration: 1.8,
-           ease: 'expo.out',
-           stagger: 0.05
+            yPercent: 100,
+            duration: 1.8,
+            ease: 'expo.out',
+            stagger: 0.05
         });
 
         gsap.from(paragraphSplit.lines, {
@@ -38,15 +47,36 @@ const Hero = () => {
                 scrub: true
             }
         })
-        .to('.right-leaf', { y:250 }, 0)
-        .to('.left-leaf', { y:-250 }, 0);
-        
+            .to('.right-leaf', { y: 250 }, 0)
+            .to('.left-leaf', { y: -250 }, 0);
+
+        const startValue = isMobile ? 'top 50%' : 'center 60%';
+        const endValue = isMobile ? '120% top' : 'bottom top';
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: 'video',
+                start: startValue,
+                end: endValue,
+                scrub: true,
+                pin: true
+            }
+        })
+        videoRef.current.onloadedmetadata = () => {
+            tl.to(videoRef.current, {
+                currentTime: videoRef.current.duration
+            });
+        }
 
 
-    }, []);
+
+    });
 
     return (
-        <section id="hero" className="noisy">
+        <section id="hero" ref={containerRef} className=" relative h-screen justify-center overflow-hidden">
+
+            <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px] -z-5"></div>
+            
             <h1 className='title'>MOJITO</h1>
 
             <img src="/images/hero-left-leaf.png" alt="left-leaf" className='left-leaf' />
@@ -69,8 +99,20 @@ const Hero = () => {
 
                 </div>
             </div>
+            <div className='video absolute inset-0'>
+                <video
+                    src="/videos/output.mp4"
+                    ref={videoRef}
+                    muted
+                    playsInline
+                    preload='auto'
+                    className="absolute top-20 left-0 h-full object-center -z-100 "
+                />
 
+            </div>
         </section>
+
+
     );
 };
 
