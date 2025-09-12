@@ -4,9 +4,6 @@ import { ScrollTrigger, SplitText } from 'gsap/all';
 import { gsap } from 'gsap';
 import { useMediaQuery } from 'react-responsive';
 
-
-
-
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Hero = () => {
@@ -98,19 +95,19 @@ const Hero = () => {
 		 
 		 <div className="content">
 			<div className="space-y-5 hidden md:block">
-			 <p>Cool. Crisp. Classic.</p>
+			 <p>Gelada. Refrescante. Inconfundível.</p>
 			 <p className="subtitle">
-				Sip the Spirit <br /> of Summer
+				Sinta o Sabor <br /> da Felicidade
 			 </p>
 			</div>
 			
 			<div className="view-cocktails">
 			 <p className="subtitle">
-				Every cocktail on our menu is a blend of premium ingredients,
-				creative flair, and timeless recipes — designed to delight your
-				senses.
+				Cada produto Coca-Cola é feito para trazer refrescância, sabor
+				único e momentos inesquecíveis — criado para encantar todos os
+				sentidos.
 			 </p>
-			 <a href="#cocktails">View cocktails</a>
+			 <a href="#cocktails">Ver produtos</a>
 			</div>
 		 </div>
 		</div>
@@ -129,5 +126,4 @@ const Hero = () => {
  );
 };
 
-
-export default Hero; 
+export default Hero;

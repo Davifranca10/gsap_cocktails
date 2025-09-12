@@ -1,58 +1,59 @@
 const navLinks = [
-  { id: 'cocktails', title: 'Coquetéis' },
-  { id: 'about', title: 'Sobre Nós' }
+  { id: 'cocktails', title: 'Produtos' },
+  { id: 'about', title: 'Nossa História' }
 ];
- const cocktailLists = [
+
+const cocktailLists = [
  {
-	name: "Coca Cola",
-	country: "ING",
+	name: "Coca-Cola Tradicional",
+	country: "BRA",
 	detail: "550 ml",
 	price: "R$10",
  },
  {
-	name: "Monster Energy White",
+	name: "Coca-Cola Sem Açúcar",
 	country: "EUA",
 	detail: "500 ml",
-	price: "R$19",
+	price: "R$12",
  },
  {
-	name: "Baly Energy Drink",
+	name: "Fanta Laranja",
 	country: "URU",
 	detail: "750 ml",
 	price: "R$7",
  },
  {
-	name: "Aguinha",
+	name: "Água Crystal",
 	country: "BRA",
 	detail: "600 ml",
-	price: "$10",
+	price: "R$5",
  },
 ];
 
 const mocktailLists = [
  {
-	name: "Coca Cola Zero",
+	name: "Coca-Cola Zero",
 	country: "SWE",
 	detail: "550 ml",
 	price: "R$10",
  },
  {
-	name: "Monster Energy Ultra Zero",
+	name: "Fanta Uva Zero",
 	country: "JAP",
 	detail: "550 ml",
-	price: "R$22",
+	price: "R$11",
  },
  {
-	name: "Baly Energy Mangoloco Zero",
+	name: "Sprite Sem Açúcar",
 	country: "ARG",
 	detail: "750 ml",
-	price: "R$23",
+	price: "R$9",
  },
  {
-	name: "Guaraná Zero",
+	name: "Guaraná Jesus Zero",
 	country: "BRA",
 	detail: "600 ml",
-	price: "$13",
+	price: "R$8",
  },
 ];
 
@@ -72,33 +73,33 @@ const profileLists = [
 ];
 
 const featureLists = [
- "Perfectly balanced blends",
- "Garnished to perfection",
- "Ice-cold every time",
- "Expertly shaken & stirred",
+ "Sabor único e inconfundível",
+ "Sempre gelada e refrescante",
+ "Perfeita para qualquer momento",
+ "Mais de 130 anos de tradição",
 ];
 
 const goodLists = [
- "Handpicked ingredients",
- "Signature techniques",
- "Bartending artistry in action",
- "Freshly muddled flavors",
+ "Ingredientes selecionados",
+ "Receita secreta original",
+ "Qualidade garantida mundialmente",
+ "Refrescância que une pessoas",
 ];
 
 const storeInfo = {
- heading: "Where to Find Us",
- address: "456, Raq Blvd. #404, Los Angeles, CA 90210",
+ heading: "Onde Nos Encontrar",
+ address: "Avenida Brasil, 1234 - Rio de Janeiro, RJ",
  contact: {
-	phone: "(555) 987-6543",
-	email: "hello@jsmcocktail.com",
+	phone: "(21) 99999-1234",
+	email: "contato@cocacola.com",
  },
 };
 
 const openingHours = [
- { day: "Mon–Thu", time: "11:00am – 12am" },
- { day: "Fri", time: "11:00am – 2am" },
- { day: "Sat", time: "9:00am – 2am" },
- { day: "Sun", time: "9:00am – 1am" },
+ { day: "Seg–Qui", time: "09:00 – 22:00" },
+ { day: "Sex", time: "09:00 – 23:30" },
+ { day: "Sáb", time: "08:00 – 23:30" },
+ { day: "Dom", time: "08:00 – 22:00" },
 ];
 
 const socials = [
@@ -122,39 +123,37 @@ const socials = [
 const allCocktails = [
  {
 	id: 1,
-	name: "Classic Mojito",
+	name: "Coca-Cola Tradicional",
 	image: "/images/drink1.png",
-	title: "Simple Ingredients, Bold Flavor",
+	title: "O Sabor Original que Conquista",
 	description:
-	 "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
+	 "A clássica Coca-Cola que refresca gerações. Ideal para acompanhar refeições, encontros e momentos especiais. Sempre gelada, sempre inesquecível.",
  },
  {
 	id: 2,
-	name: "Raspberry Mojito",
+	name: "Coca-Cola Zero",
 	image: "/images/drink2.png",
-	title: "A Zesty Classic That Never Fails",
+	title: "Zero Açúcar, Mesmo Sabor",
 	description:
-	 "The Margarita is a classic that balances tangy lime, smooth tequila, and a touch of sweetness. Shaken, frozen, or on the rocks—it’s always crisp & refreshing.",
+	 "Todo o sabor inconfundível da Coca-Cola, mas sem açúcar. Refrescante e perfeita para quem busca equilíbrio sem abrir mão do prazer.",
  },
  {
 	id: 3,
-	name: "Violet Breeze",
+	name: "Fanta Laranja",
 	image: "/images/drink3.png",
-	title: "Simple Ingredients, Bold Flavor",
+	title: "Diversão e Refrescância em Cada Gole",
 	description:
-	 "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
+	 "Com seu sabor frutado e vibrante, a Fanta é a escolha ideal para quem quer refrescância e diversão a qualquer hora do dia.",
  },
  {
 	id: 4,
-	name: "Curacao Mojito",
+	name: "Sprite Limão",
 	image: "/images/drink4.png",
-	title: "Crafted With Care, Poured With Love",
+	title: "Refrescância que Surpreende",
 	description:
-	 "Each cocktail is made with fresh ingredients and a passion for perfecting every pour, whether you're celebrating or simply relaxing.",
+	 "Sprite é sinônimo de frescor e leveza. Feita para matar sua sede com aquele sabor cítrico inconfundível que combina com tudo.",
  },
 ];
-
-
 
 export {
  navLinks,

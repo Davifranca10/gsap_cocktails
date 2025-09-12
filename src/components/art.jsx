@@ -26,14 +26,12 @@ const Art = () => {
                 duration: 5, ease: 'power1.inOut '
             })
             .to('#masked-content', { opacity: 1, duration: 1, ease: 'power1.inOut' })
-
-
     })
 
     return (
         <div id="art">
             <div className="container mx-auto h-full pt-20">
-                <h2 className="will-fade">The ART</h2>
+                <h2 className="will-fade">THE ART</h2>
 
                 <div className="content">
                     <ul className="space-y-4 will-fade">
@@ -48,7 +46,7 @@ const Art = () => {
                     <div className="cocktail-img">
                         <img
                             src="/images/under-img.jpg"
-                            alt="cocktail"
+                            alt="coca-cola"
                             className="abs-center masked-img size-full object-contain"
                         />
                     </div>
@@ -64,10 +62,10 @@ const Art = () => {
                 </div>
 
                 <div className="masked-container">
-                    <h2 className="will-fade">Sip-Worthy Perfection</h2>
+                    <h2 className="will-fade">Perfeição em Cada Gole</h2>
                     <div id="masked-content">
-                        <h3>Made with Craft, Poured with Passion</h3>
-                        <p>This isn’t just a drink. It’s a carefully crafted moment made just for you.</p>
+                        <h3>Feita com Tradição, Servida com Paixão</h3>
+                        <p>Não é apenas uma bebida. É um momento especial, criado para você sentir o sabor único da Coca-Cola.</p>
                     </div>
                 </div>
             </div>
