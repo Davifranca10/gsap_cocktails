@@ -131,27 +131,27 @@ const allCocktails = [
  },
  {
 	id: 2,
-	name: "Coca-Cola Zero",
+	name: "Sprite",
 	image: "/images/drink2.png",
-	title: "Zero Açúcar, Mesmo Sabor",
+	title: "Refrescância que Explode em Sabor",
 	description:
-	 "Todo o sabor inconfundível da Coca-Cola, mas sem açúcar. Refrescante e perfeita para quem busca equilíbrio sem abrir mão do prazer.",
+	 "Com seu gosto leve e cítrico, Sprite é a pedida perfeita para matar a sede e trazer frescor em qualquer momento.",
  },
  {
 	id: 3,
-	name: "Fanta Laranja",
+	name: "Red Bull",
 	image: "/images/drink3.png",
-	title: "Diversão e Refrescância em Cada Gole",
+	title: "Energia e Foco em Cada Lata",
 	description:
-	 "Com seu sabor frutado e vibrante, a Fanta é a escolha ideal para quem quer refrescância e diversão a qualquer hora do dia.",
+	 "Com seu sabor marcante e único, Red Bull é a escolha certa para quem busca disposição e performance em qualquer momento do dia.",
  },
  {
 	id: 4,
-	name: "Sprite Limão",
+	name: "Monster",
 	image: "/images/drink4.png",
-	title: "Refrescância que Surpreende",
+	title: "Força e Atitude em Cada Gole",
 	description:
-	 "Sprite é sinônimo de frescor e leveza. Feita para matar sua sede com aquele sabor cítrico inconfundível que combina com tudo.",
+	 "Com seu sabor intenso e cheio de personalidade, Monster é a escolha perfeita para quem vive no limite e precisa de energia sem parar.",
  },
 ];
 
