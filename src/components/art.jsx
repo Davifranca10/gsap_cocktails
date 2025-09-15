@@ -22,7 +22,7 @@ const Art = () => {
         maskTimeline
             .to('.will-fade', { opacity: 0, stagger: 0.2, ease: 'power1.inOut', })
             .to('.masked-img', {
-                scale: 1.3, maskPosition: 'center', maskSize: '400%',
+                scale: 1.3, maskPosition: 'center', maskSize: '60%',
                 duration: 5, ease: 'power1.inOut '
             })
             .to('#masked-content', { opacity: 1, duration: 1, ease: 'power1.inOut' })
@@ -31,7 +31,7 @@ const Art = () => {
     return (
         <div id="art">
             <div className="container mx-auto h-full pt-20">
-                <h2 className="will-fade">THE ART</h2>
+                <h2 className="will-fade text-[#C7220A]">+SABOR</h2>
 
                 <div className="content">
                     <ul className="space-y-4 will-fade">

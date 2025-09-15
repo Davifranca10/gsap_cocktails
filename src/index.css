@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
 
 @import "tailwindcss";
+
+
+.font-sansita{
+    font-family: "Special Gothic Expanded One", serif;
+    
+};
 
 @font-face {
     font-family: "Modern Negra";
@@ -22,6 +30,7 @@ body {
     color: rgb(255, 255, 255);
     scroll-behavior: smooth;
     overflow-x: hidden;
+
 }
 
 @utility flex-center {
@@ -37,19 +46,17 @@ body {
 }
 
 @utility text-gradient {
-    background: linear-gradient(to bottom, #ffffff, #898989);
+    background: linear-gradient(to bottom, #e22a2a, #450707);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
 @utility radial-gradient {
-    background: radial-gradient(
-            circle at center,
+    background: radial-gradient(circle at center,
             #434343 0%,
             #000 50%,
-            transparent 100%
-    );
+            transparent 100%);
 }
 
 @utility masked-img {
@@ -61,7 +68,7 @@ body {
 
 @layer components {
     main {
-        @apply w-full overflow-x-hidden;
+        @apply w-full overflow-y-hidden;
     }
 
     nav {
@@ -212,13 +219,13 @@ body {
         }
 
         .badge {
-            @apply inline-block rounded-full bg-white text-black px-4 py-2 text-sm font-medium mb-8;
+            @apply inline-block rounded-full bg-[#e22a2a] text-black scale-120 px-4 py-2 text-sm font-medium mb-8;
         }
 
         .top-grid {
             @apply grid grid-cols-1 xl:grid-cols-12 gap-5 mb-5 md:px-0 px-5;
 
-            > div {
+            >div {
                 @apply rounded-3xl overflow-hidden h-72 relative;
             }
 
@@ -230,7 +237,7 @@ body {
         .bottom-grid {
             @apply grid grid-cols-1 md:grid-cols-12 gap-5 md:px-0 px-5;
 
-            > div {
+            >div {
                 @apply rounded-3xl overflow-hidden h-72 relative;
             }
 

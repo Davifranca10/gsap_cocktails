@@ -46,7 +46,7 @@ const About = () => {
 
                         <div>
                             <p className="md:text-3xl text-xl font-bold">
-                                <span>4.9</span>/5
+                                <span className='text-[#FF3333]'>4.9</span>/5
                             </p>
                             <p className="text-sm text-white-100">
                                 Mais de +12.000 clientes satisfeitos
@@ -64,7 +64,7 @@ const About = () => {
 
                 <div className="md:col-span-6">
                     <div className="noisy" />
-                    <img src="/images/abt2.png" alt="grid-img-2" />
+                    <img  src="/images/abt2.png" alt="grid-img-2" />
                 </div>
 
                 <div className="md:col-span-3">
