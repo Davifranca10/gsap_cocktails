@@ -13,15 +13,15 @@ const About = () => {
         const scrollTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: "#about",
-                start: "top center"
+                start: "top center",
             }
         });
 
         scrollTimeline.from(titleSplit.words, {
-            opacity: 0, duration: 1, yPercent: 100, ease: "expo.out", stagger: 0.02
+            opacity: 0, duration: 1, yPercent: 100, ease: "expo.out", stagger: 0.02 
         })
         .from('.top-grid div, .bottom-grid div', {
-            opacity:0, duration:1, ease: "power1.inOut", stagger: 0.04,
+            opacity:0, duration:1, ease: "power1.inOut", stagger: 0.04, 
         },"-=0.5")
     });
 
@@ -39,7 +39,7 @@ const About = () => {
 
                     <div className="sub-content">
                         <p>
-                            Cada produto Coca-Cola reflete nossa paixão pela qualidade —
+                            Cada produto <span className='text-[#E01D1D]'>Coca-Cola</span> reflete nossa paixão pela qualidade —
                             da receita secreta até o momento em que você sente a refrescância.
                             Esse cuidado transforma cada bebida em uma experiência única.
                         </p>

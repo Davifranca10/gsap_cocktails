@@ -106,11 +106,11 @@ const Hero = () => {
 
 						<div className="view-cocktails">
 							<p className="subtitle">
-								Cada produto Coca-Cola é feito para trazer refrescância, sabor
+								Cada produto <span className='text-[#E01D1D]'>Coca-Cola</span> é feito para trazer refrescância, sabor
 								único e momentos inesquecíveis — criado para encantar todos os
 								sentidos.
 							</p>
-							<a href="#cocktails" className='text-[#D90D0D]'>Ver produtos</a>
+							<a href="#cocktails" className='text-[#D90D0D] hover:text-[#FFFFFF] duration-200 text-2xl transition-all'>Ver produtos</a>
 						</div>
 					</div>
 				</div>
