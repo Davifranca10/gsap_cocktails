@@ -11,7 +11,13 @@ const Cocktails = () => {
 
     useGSAP(() => {
 
+        const letrasCom = new SplitText("#com", {
+            type: "chars",
+        });
 
+        const letrasSem = new SplitText("#sem", {
+            type: "chars",
+        });
 
         const parallaxTimeline = gsap.timeline({
             scrollTrigger: {
@@ -51,14 +57,16 @@ const Cocktails = () => {
         });
 
         const lataNormal = gsap.from("#latanormal", {
-            scale: 1.6,
-            xPercent: 100,
+            opacity: 0,
+            rotate: -90,
+            scale: 2.5,
+            xPercent: -100,
             duration: 1.5,
             scrollTrigger: {
                 trigger: "#latanormal",
-                start: "10% 30%",
+                start: "5% 30%",
                 end: "85% center",
-                markers: true,
+                markers: false,
                 toggleActions: "play reverse play reverse"
 
             }
@@ -66,19 +74,124 @@ const Cocktails = () => {
         });
 
         const lataZero = gsap.from("#latazero", {
-            scale:1.6,
-            xPercent: 0,
+            opacity: 0,
+            rotate: 90,
+            scale: 2.5,
+            xPercent: 200,
             duration: 1.5,
             scrollTrigger: {
-                trigger: "#latanormal",
-                start: "10% 30%",
+                trigger: "#latazero",
+                start: "5% 30%",
                 end: "85% center",
                 markers: false,
                 toggleActions: "play reverse play reverse"
 
             }
 
-        })
+        });
+
+        const logo = gsap.fromTo("#logococa", {
+            opacity: 0,
+            xPercent: -50,
+            yPercent: -60,
+            scale: 0.80
+        }, {
+            opacity: 1,
+            scale: 0.45,
+            duration: 1.5,
+            yPercent: -35,
+            xPercent: -210,
+
+            ease: 'power1.inOut',
+            scrollTrigger: {
+                trigger: "#logococa",
+                start: "190% 90%",
+                end: "bottom top",
+                markers: false,
+                toggleActions: "play reverse play reverse"
+
+
+            }
+        });
+
+        const logoZero = gsap.fromTo("#logococazero", {
+            opacity: 0,
+            xPercent: -50,
+            yPercent: -60,
+            scale: 0.80
+        }, {
+            opacity: 1,
+            scale: 0.45,
+            duration: 1.5,
+            yPercent: -35,
+            xPercent: 30,
+
+            ease: 'power1.inOut',
+            scrollTrigger: {
+                trigger: "#logococa",
+                start: "190% 90%",
+                end: "bottom top",
+                markers: false,
+                toggleActions: "play reverse play reverse"
+
+
+            }
+        });
+
+        const comAcucar = gsap.fromTo(letrasCom.chars, {
+            opacity: 0,
+            yPercent: 50
+        }, {
+            opacity: 1,
+            duration: 1.5,
+            yPercent: 400,
+
+            scrollTrigger: {
+                trigger: "#com",
+                start: "100% 30%",
+                end: "190% top",
+                markers: false,
+                toggleActions: "play reverse play reverse"
+
+
+            }
+        });
+
+        const semAcucar = gsap.fromTo(letrasSem.chars, {
+            opacity: 0,
+            yPercent: 50
+        }, {
+            opacity: 1,
+            duration: 1.5,
+            yPercent: 400,
+
+            scrollTrigger: {
+                trigger: "#sem",
+                start: "100% 30%",
+                end: "190% top",
+                markers: false,
+                toggleActions: "play reverse play reverse"
+
+
+            }
+        });
+
+        gsap.from("#produto", {
+            opacity: 0,
+            yPercent:60,
+            duration: 2,
+            scrollTrigger: {
+                trigger: "#produto",
+                start: "top 80%",
+                end: "300% top",
+                markers: true,
+                toggleActions: "play reverse play reverse"
+
+            }
+        });
+
+       
+
 
     });
 
@@ -92,8 +205,12 @@ const Cocktails = () => {
                 <img src="/images/cocktail-right-leaf.png" alt="r-leaf" id="c-right-leaf" />
             </div>
 
-            <div id='logo-coca' className=''>
-                <img src="/images/coca-logo.png" alt="coca-logo" className='absolute left-1/2 top-40 transform -translate-x-1/2 -translate-y-1/2' />
+            <div>
+                <h1 id='produto' className='font-sansita absolute left-1/2 top-25 -translate-x-1/2 -translate-y-1/2 text-8xl font-bold text-center'><span className='text-[#F01616]'>PRO</span>DUTOS</h1>
+                <img id='logococa' src="/images/coca-logo.png" alt="coca-logo" className='absolute left-1/2 top-40 transform -translate-x-1/2 -translate-y-1/2' />
+                <h2 id='com' className='text-4xl font-bold text-center font-sansita absolute left-40 top-20'>Com Açúcares</h2>
+                <h2 id='sem' className='text-4xl font-bold text-center font-sansita absolute right-60 top-20 z-10'>Sem Açúcares</h2>
+                <img id='logococazero' src="/images/coca-logo.png" alt="coca-logo" className='absolute left-1/2 top-40 transform -translate-x-1/2 -translate-y-1/2' />
             </div>
 
 
