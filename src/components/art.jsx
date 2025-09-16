@@ -22,10 +22,10 @@ const Art = () => {
         maskTimeline
             .to('.will-fade', { opacity: 0, stagger: 0.2, ease: 'power1.inOut', })
             .to('.masked-img', {
-                scale: 1.3, maskPosition: 'center', maskSize: '60%',
+                scale: 1.2, maskPosition: 'center', maskSize: '100%',
                 duration: 5, ease: 'power1.inOut '
             })
-            .to('#masked-content', { opacity: 1, duration: 1, ease: 'power1.inOut' })
+            .to('#masked-content', { opacity: 1, duration: 3, ease: 'power1.inOut' })
     })
 
     return (
@@ -44,7 +44,7 @@ const Art = () => {
                     </ul>
 
                     <div className="cocktail-img">
-                        <img
+                        <img 
                             src="/images/under-img.jpg"
                             alt="coca-cola"
                             className="abs-center masked-img size-full object-contain"

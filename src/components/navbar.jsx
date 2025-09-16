@@ -28,8 +28,8 @@ const Navbar = () => {
             <nav>
                 <div>
                     <a href="#home" className="flex items-center gap-2">
-                        <img src="/images/logo.png" alt="logo" className='rounded-full w-9 h-9' />
-                        <p className='font-sansita text-xl'>Coca-Cola</p>
+                        <img src="/images/logo.png" alt="logo" className='rounded-full w-30 h-30' />
+                        <p className='font-sansita text-xl'>Coca-Cola Femsa</p>
                     </a>
 
                     <ul>

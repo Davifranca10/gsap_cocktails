@@ -178,13 +178,15 @@ const Cocktails = () => {
 
         gsap.from("#produto", {
             opacity: 0,
+            filter:"blur(4px)",
             yPercent:60,
             duration: 2,
             scrollTrigger: {
                 trigger: "#produto",
-                start: "top 80%",
+                start: "top 90%",
                 end: "300% top",
-                markers: true,
+                markers: false,
+                scrub:true,
                 toggleActions: "play reverse play reverse"
 
             }
@@ -206,7 +208,7 @@ const Cocktails = () => {
             </div>
 
             <div>
-                <h1 id='produto' className='font-sansita absolute left-1/2 top-25 -translate-x-1/2 -translate-y-1/2 text-8xl font-bold text-center'><span className='text-[#F01616]'>PRO</span>DUTOS</h1>
+                <h1 id='produto' className='blur-0 font-sansita absolute left-1/2 top-25 -translate-x-1/2 -translate-y-1/2 text-8xl font-bold text-center'><span className='text-[#F01616]'>PRO</span>DUTOS</h1>
                 <img id='logococa' src="/images/coca-logo.png" alt="coca-logo" className='absolute left-1/2 top-40 transform -translate-x-1/2 -translate-y-1/2' />
                 <h2 id='com' className='text-4xl font-bold text-center font-sansita absolute left-40 top-20'>Com Açúcares</h2>
                 <h2 id='sem' className='text-4xl font-bold text-center font-sansita absolute right-60 top-20 z-10'>Sem Açúcares</h2>
